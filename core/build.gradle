@@ -6,6 +6,7 @@ plugins {
     id 'kotlin-kapt'
     id 'kotlinx-serialization'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply from: rootProject.file('gradle/android.gradle')
@@ -30,10 +31,11 @@ dependencies {
     implementation Dep.AndroidX.Navigation.runtimeKtx
     implementation Dep.AndroidX.Navigation.fragmentKtx
 
-    implementation Dep.Koin.android
-    implementation Dep.Koin.scope
-    implementation Dep.Koin.viewmodel
-    implementation Dep.Koin.fragment
+    implementation Dep.Dagger.hilt
+    kapt Dep.Dagger.compiler
+    implementation Dep.Dagger.Android.hilt
+    implementation Dep.Dagger.Android.viewModel
+    kapt Dep.Dagger.Android.compiler
 
     api Dep.Timber.android
 }

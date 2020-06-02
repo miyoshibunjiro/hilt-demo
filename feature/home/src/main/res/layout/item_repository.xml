@@ -10,7 +10,7 @@
 
         <variable
             name="repository"
-            type="com.ryunen344.template.model.Repository" />
+            type="com.miyoshibunjiro.hilt.model.Repository" />
 
     </data>
 

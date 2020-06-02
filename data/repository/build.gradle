@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlinx-serialization'
+    id 'dagger.hilt.android.plugin'
 }
 
 apply from: rootProject.file('gradle/android.gradle')
@@ -31,8 +32,8 @@ dependencies {
     implementation Dep.AndroidX.LiveData.liveDataCoreKtx
     implementation Dep.AndroidX.LiveData.liveDataKtx
 
-    implementation Dep.Koin.android
-    implementation Dep.Koin.scope
+    implementation Dep.Dagger.hilt
+    kapt Dep.Dagger.compiler
 
     testImplementation Dep.Test.junit
     androidTestImplementation Dep.Test.androidJunit4Ktx

@@ -7,21 +7,21 @@
 
         <variable
             name="viewModel"
-            type="com.ryunen344.template.home.HomeViewModel" />
+            type="com.miyoshibunjiro.hilt.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="0dp"
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.ryunen344.template.home.RepositoryRecyclerView
+        <com.miyoshibunjiro.hilt.home.RepositoryRecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:scrollbarStyle="outsideOverlay"

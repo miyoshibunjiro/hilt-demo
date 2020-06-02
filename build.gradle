@@ -8,27 +8,31 @@ buildscript {
         google()
         jcenter()
         gradlePluginPortal()
+        maven { url 'https://androidx.dev/snapshots/builds/6546797/artifacts/repository' }
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url 'https://dl.bintray.com/lisawray/maven' }
-        maven { url "https://plugins.gradle.org/m2/"}
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
         classpath Dep.GradlePlugin.Android.android
         classpath Dep.GradlePlugin.Android.safeArgs
         classpath Dep.GradlePlugin.kotlin
         classpath Dep.GradlePlugin.kotlinSerialization
+        classpath Dep.Dagger.plugin
         classpath Dep.GradlePlugin.releaseHub
     }
 }
 
 allprojects {
     repositories {
+
         google()
         jcenter()
         gradlePluginPortal()
+        maven { url 'https://androidx.dev/snapshots/builds/6546797/artifacts/repository' }
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url 'https://dl.bintray.com/lisawray/maven' }
-        maven { url "https://plugins.gradle.org/m2/"}
+        maven { url "https://plugins.gradle.org/m2/" }
     }
 }
 

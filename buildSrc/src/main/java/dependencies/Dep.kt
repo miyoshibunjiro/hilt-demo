@@ -78,6 +78,18 @@ object Dep {
         const val fragment = "org.koin:koin-androidx-fragment:$version"
     }
 
+    object Dagger {
+        const val plugin = "com.google.dagger:hilt-android-gradle-plugin:2.28-alpha"
+        const val hilt = "com.google.dagger:hilt-android:2.28-alpha"
+        const val compiler = "com.google.dagger:hilt-android-compiler:2.28-alpha"
+
+        object Android {
+            const val hilt = "androidx.hilt:hilt-common:1.0.0-SNAPSHOT"
+            const val viewModel = "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-SNAPSHOT"
+            const val compiler = "androidx.hilt:hilt-compiler:1.0.0-SNAPSHOT"
+        }
+    }
+
     object Ktor {
         private const val version = "1.3.1"
         const val clientCore = "io.ktor:ktor-client-core:$version"
